@@ -1,0 +1,46 @@
+#alert3 {
+    border-style: solid;
+    border-color: white;
+    background-color: lightpink;
+    color: white;
+    margin: 0 5px;
+    font-size: 9pt;
+}
+#alert2 {
+    border-style: solid;
+    border-color: white;
+    background-color: red;
+    color: white;
+    margin: 0 5px;
+    font-size: 9pt;
+}
+#alert1 {
+    border-style: solid;
+    border-color: white;
+    background-color: orange;
+    color: white;
+    margin: 0 5px;
+    font-size: 9pt;
+}
+#alert0 {
+    border-style: solid;
+    border-color: white;
+    background-color: yellow;
+    color: white;
+    margin: 0 5px;
+    font-size: 9pt;
+}
+p {
+    background-color: white;
+    margin: 0;
+}
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 1px 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
