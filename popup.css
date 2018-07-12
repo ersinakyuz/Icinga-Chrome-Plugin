@@ -32,6 +32,7 @@
 }
 p {
     background-color: white;
+    color : white;
     margin: 0;
 }
 .button {
@@ -42,5 +43,20 @@ p {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 12px;
+}
+
+a:link {
+    color: white;
+}
+a:visited {
+    color: white;
+}
+a:hover {
+    color: black;
+    background-color: white;
+}
+a:active {
+    color: yellow;
+
 }

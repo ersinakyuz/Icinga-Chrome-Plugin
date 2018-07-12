@@ -1,8 +1,14 @@
 {
   "manifest_version": 2,
   "name": "Icinga Chrome Extension",
-  "description": "This extension made for ING internal use by Ersin Akyuz",
-  "version": "0.1",
+  "short_name" : "ICE",
+  "description": "This extension made for ICINGA and Nagios by Ersin Akyuz",
+  "version": "0.4",
+  "options_page": "options.html",
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  },
   "browser_action": 
   {
   "default_icon": "icon.png",
@@ -10,6 +16,7 @@
   },
   "permissions": [
     "activeTab",
+    "notifications",
 	"https://icinga/icingaweb2/monitoring/list/services?_host_department=IcingaServisYonetimi&_host_environment=PROD&service_state!=0&service_state!=99&service!=Check%20Pending%20Reboot%20&service!=Check%20Service&service!=Linux%20Service%20Check%20By%20Snmp&service!=Check%20File%20Size&service!=Arcsight%20Audit%20Policy&service!=Linux%20Centrify%20Check%20By%20Snmp&service!=Check%20Uptime&service!=Linux%20Uptime%20Check%20By%20Snmp&service!=Check%20Zpool&service!=Linux%20Cluster%20Check%20By%20Snmp&service!=Check%20Event%20ID%20System&_host_dc=DC1&service_acknowledged=0&service_in_downtime=0&host_in_downtime=0&limit=500&sort=service_severity&format=json"
   ],
   "icons": { "16": "icon.png","48": "icon.png","128": "icon.png" },
