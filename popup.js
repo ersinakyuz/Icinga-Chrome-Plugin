@@ -4,25 +4,28 @@ var NagiosURL = "https://icinga/icingaweb2/monitoring/list/services?_host_depart
 xhr.open("GET", NagiosURL, false);
 xhr.send(null);
 
-if(xhr.status == 200){
-    //var data = xhr.responseXML;
-    var data = JSON.parse(xhr.responseText);
-    console.log(data);
-    for(var lines in data){
-        var sunucu = data[lines].host_name;
-        var hata = data[lines].service_output;
-        var durum = data[lines].service_state;
-        var servisadi = data[lines].service_display_name
-        //document.write(sunucu+`-`+hata);
-        //sunuculine="<div id='alert"+durum+"'><a href='link' title='"+hata+"'>"+sunucu+"</a></div></n>";
-        //sunuculine="<div  align="center" display: table; id='alert"+durum+"'><a href='link' title='"+hata+"'>"+sunucu+"</a></div><div  align="center">"+servisadi+"</div></div></n>";
-        sunuculine="<tr><td id='alert"+durum+"'><a href='link' title='"+hata+"'>"+sunucu+"</a><td>"+servisadi+"</td></tr></n>";
-        document.write(sunuculine);
-        document.write("\n");
-        //document.getElementById('servers').innerHTML += "DURUM"
-        //document.getElementById('servers').innerHTML += sunuculine;
-    }
+    if (xhr.status == 200) {
+        //var data = xhr.responseXML;
+        try {
+            var data = JSON.parse(xhr.responseText);
+            console.log(data);
+            for (var lines in data) {
+                var sunucu = data[lines].host_name;
+                var hata = data[lines].service_output;
+                var durum = data[lines].service_state;
+                var servisadi = data[lines].service_display_name;
+                sunuculine = "<tr><td id='alert" + durum + "'><a href='https://icinga/icingaweb2/dashboard?pane=Servisyon#!/icingaweb2/monitoring/host/show?host="+ sunucu +"' target='_blank' title='" + hata + "'>" + sunucu + "</a><td>" + servisadi + "</td></tr></n>";
+                document.write(sunuculine);
+                document.write("\n");
+            }
+        }
+        catch (e) {
+            document.write("Please login to <b>NAGIOS/ICINGA!</b>");
+            console.log("Please login to NAGIOS/ICINGA");
 
-} else	{
-    document.body.innerHTML("Failed to load the data");
-}
+        }
+    } else {
+        document.body.innerHTML("Failed to load the data");
+        document.write("Failed to load the data");
+        console.log("Failed to load the data");
+    }
