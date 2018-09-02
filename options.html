@@ -20,7 +20,7 @@
             color: lime;
         }
         table{
-            width:100%;
+            width:700px;
         }
         #buttonbar {align-items: right; alignment: right}
     </style>
@@ -29,10 +29,18 @@
 <table>
     <tr>
         <td>
-            ICINGA/Nagios URL:
+            ICINGA URL:
         </td>
-        <td>
+        <td title="e.g. https://www.icinga.com/demo/monitoring/list/services?sort=service_severity&format=json">
             <input type="text" id="icingaURL" name="icingaURL" style="width:100%;">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            e.g.
+        </td>
+        <td title="">
+            https://www.icinga.com/demo/monitoring/list/services?sort=service_severity&format=json
         </td>
     </tr>
     <!--

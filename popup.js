@@ -1,4 +1,8 @@
 // content.js
+var icingaURL = localStorage["icingaURL"];
+if (icingaURL == null){
+    icingaURL = "https://www.icinga.com/demo/monitoring/list/services?sort=service_severity&format=json";
+}
 var xhr = new XMLHttpRequest;
 function getUrlParts(fullyQualifiedUrl) {
     var url = {},
@@ -55,12 +59,7 @@ function getUrlParts(fullyQualifiedUrl) {
         url.domainpath = url.domain
     return url
 }
-try {
-    var icingaURL = localStorage["icingaURL"];
-}
-catch (e) {
-    document.write("setting couldnt read")
-}
+
 //if (icingaURL == null)
 //    default_icingaURL="https://www.icinga.com/demo/monitoring/list/services?sort=service_severity&format=json";
 //    icingaURL = default_icingaURL;

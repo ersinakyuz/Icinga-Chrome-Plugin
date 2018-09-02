@@ -2,7 +2,7 @@
 var alertinterval = localStorage["alertinterval"];
 var icingaURL = localStorage["icingaURL"];
 var show_alert = localStorage["show_alert"];
-if(show_alert==""){
+if(show_alert==null){
     show_alert=1;
 }
 
@@ -23,7 +23,6 @@ function showError() {
 
     var xhr = new XMLHttpRequest;
     var NagiosURL = icingaURL;
-    //var NagiosURL = "https://icinga/icingaweb2/monitoring/list/services?_host_department=IcingaServisYonetimi&_host_environment=PROD&service_state!=0&service_state!=99&service!=Check%20Pending%20Reboot%20&service!=Check%20Service&service!=Linux%20Service%20Check%20By%20Snmp&service!=Check%20File%20Size&service!=Arcsight%20Audit%20Policy&service!=Linux%20Centrify%20Check%20By%20Snmp&service!=Check%20Uptime&service!=Linux%20Uptime%20Check%20By%20Snmp&service!=Check%20Zpool&service!=Linux%20Cluster%20Check%20By%20Snmp&service!=Check%20Event%20ID%20System&_host_dc=DC1&service_acknowledged=0&service_in_downtime=0&host_in_downtime=0&limit=500&sort=service_severity&format=json"
     xhr.open("GET", NagiosURL, false);
     xhr.send(null);
 
