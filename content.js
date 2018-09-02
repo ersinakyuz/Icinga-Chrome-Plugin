@@ -1,2 +1,2 @@
 // content.js
-alert("Buraya icinga add-on gelecek!")
+//alert("Buraya icinga add-on gelecek!")
