@@ -39,7 +39,7 @@ function showError() {
                 document.write(sunuculine);
                 document.write("\n");
                 //hata="<div style=\"background-color:powderblue;\">"+hata+"</div>";
-                var notification = new Notification(sunucu, {icon: 'icon.png', body: hata, tag: "CRITICAL!"})
+                var notification = new Notification(sunucu, {icon: 'monitoring_small.png', body: hata, tag: "CRITICAL!"})
                 notification.onshow = function () {
                     setTimeout(notification.close, 15000)
                 }

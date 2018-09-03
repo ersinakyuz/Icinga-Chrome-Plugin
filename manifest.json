@@ -3,7 +3,7 @@
   "name": "Icinga Chrome Extension",
   "short_name" : "ICE",
   "description": "This extension made for ICINGA and Nagios by Ersin Akyuz",
-  "version": "0.78",
+  "version": "0.9",
   "options_page": "options.html",
   "options_ui": {
     "page": "options.html",
